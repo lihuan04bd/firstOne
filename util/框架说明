@@ -1,0 +1,32 @@
+测试数据和 测试用例分离 测试数据 能更好的管理
+
+basepage的提取 pageobject 中公告的部分 提取出来放到basePage中 比如页面元素等待，页面元素定位
+             1 常用的方法函数封装起来
+             2 加入日志和截图的功能
+             3 捕捉元素定义的异常
+             在什么页面做什么事情
+
+  页面的行为 就是通过页面元素操作 拼接出来的
+
+
+目录
+common
+   --basePage.py
+   dir_config.py
+   logger.py
+PageLocators
+   lo
+PageObject                 #目录下每个页面封装成一个PageObject.py 里面存放页元素定位和 页面行为操作
+  --login_page.py
+  --index.py
+TestCases                  #测试用例 按照功能点放到一个py
+  --test_login.py
+  --test_pooled.py
+TestDatas
+  --common_data.py           #公共的测试数据 如url ，正常登录账号
+  --login_data.py            # 登录测试数据，按照 list str 格式存储 测试用例页面直接应用该py 文件，速度比较快，分开便于数据管理
+  --pooled_data.py
+testcases.xlsx
+框架说明
+
+
